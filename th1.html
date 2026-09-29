@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTH1-LTW</title>
+    <link rel="stylesheet" href="th1.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <div class="logo" style=" font-size: 20px; color:chocolate">TRAN VAN NGHIA</div>
+                <button class="menu-btn">☰</button>
+            </div>
+
+            <ul class="menu" id="menu" style="font-family: Arial, sans-serif;font-size: 16px; padding: 20px;">
+                <li><a href="#" data-section="home">Trang chủ</a></li>
+                <li><a href="#" data-section="about">Giới thiệu</a></li>
+                <li><a href="#" data-section="skills">Kỹ năng</a></li>
+                <li><a href="#" data-section="projects">Dự án</a></li>
+                <li><a href="#" data-section="contact">Liên hệ</a></li>
+            </ul>
+
+            <button id="themeBtn">🌙</button>
+        </nav>
+    </header>
+<br>
+<br>
+<br>
+    <section id="home" class="hero">
+        <div>
+            <h1>Xin chào, mình tên là Trần Văn Nghĩa</h1>
+            <a href="#projects" data-section="projects" style="text-decoration: underline; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 5px; color:brown">Xem dự án</a>
+           
+        </div>
+    </section>
+
+
+    <section id="about">
+        <h2>Giới thiệu</h2>
+
+        <div class="about-content">
+            <img src="1784341333856_69699857852004903_7836522940497174800_01da7a302adaa672113a75533e0cfb12.jpg" alt="Ảnh cá nhân" style="width: 200px; height: 200px; border-radius: 50%;">
+
+            <div>
+
+                <ul style="font-family: Arial, sans-serif;font-size: 16px; padding: 20px;">
+                    <li>Mình là sinh viên năm 2 ngành cử nhân Công nghệ thông tin trường PTIT.</li>
+                    <li>Mình đang học lập trình web với các khung sườn HTML, CSS, JavaScript.</li>
+                    <li>Mình cũng là một tình nguyện viên đến từ CLB Sinh viên Tình nguyện Học viện Công nghệ Bưu chính Viễn thông, đã được 1 năm.</li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+<br> 
+    <section id="skills">
+        <h2>Kỹ năng( ở mức độ căn bản )</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <div class="progress">
+                    <span style="width: 80%"></span>
+                </div>
+                <img src="OIP.jpg" alt="HTML" style="width: 200px; height: 200px;">
+                <h2>Biết cách sử dụng các thẻ, thuộc tính để tạo ra một trang web</h2>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <div class="progress">
+                    <span style="width: 70%"></span>
+                </div>
+                <img src="1_u3wh6vaHsLNvC3uHeruW0Q.png" alt="CSS" style="width: 200px; height: 200px;">
+                <h2>Tạo hiệu ứng cho văn bản, giao diện trang web nối bật hơn</h2>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <div class="progress">
+                    <span style="width: 60%"></span>
+                </div>
+                <img src="javascript-2.jpeg" alt="JavaScript" style="width: 200px; height: 200px;">
+                <h2>Sử dụng thuật toán, cấu trúc để thiết lập ra các chức năng</h2>
+            </div>
+
+        </div>
+    </section>
+
+
+    
+    <section id="projects">
+
+        <h2>Dự án</h2>
+
+        <input
+            type="text" id="searchProject"  placeholder="Tìm kiếm dự án..."
+        >
+
+        <div class="filter-buttons">
+            <button data-filter="all">Tất cả</button>
+            <button data-filter="web">Web</button>
+            <button data-filter="java">Java</button>
+            <button data-filter="python">Python</button>
+        </div>
+
+<br>
+        <div class="project-list">
+        <p id="noResult">Không tìm thấy dự án phù hợp.</p>
+            <article class="project" data-category="web">
+                <h3>Website bán sách</h3>
+                <p>
+                    Website bán sách sử dụng HTML, CSS và JavaScript.
+                </p>
+                <span>*Lập trình Web</span>
+            </article>
+
+
+            <article class="project" data-category="java">
+                <h3>Chương trình Hello World</h3>
+                <p>
+                    Mở đầu lập trình hướng đối tượng.
+                </p>
+                <span>*Ngôn ngữ Java</span>
+            </article>
+
+
+            <article class="project" data-category="python">
+                <h3>Chương trình tra từ điển </h3>
+                <p>
+                    Tính năng tìm kiếm, thêm, xóa, lưu một lần cơ bản các từ vựng.
+                </p>
+                <span>*Ngôn ngữ Python</span>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <br>
+    <section id="contact">
+
+        <h2>Liên hệ</h2>
+
+        <form id="contactForm">
+
+            <input
+                type="text" id="name" placeholder="Họ và tên">
+
+            <input
+                type="email" id="email" placeholder="Email" >
+
+            <textarea id="message" placeholder="Nội dung" ></textarea>
+
+            <p id="charCount">0/500 ký tự</p>
+
+            <button type="submit">Gửi liên hệ</button>
+            <button type="reset">Reset</button>
+
+            <p id="formMessage"></p>
+
+        </form>
+
+    </section>
+
+
+    <footer>
+        <p style="text-align: center; box-sizing: border-box; padding: 10px; background-color: rgb(127, 92, 12); color: white;">
+            © <span id="currentYear"></span>
+            ABOUT ME - Trần Văn Nghĩa. See you again!
+        </p>
+    </footer>
+
+    <script src="th1.js"></script>
+
+</body>
+    
+</body>
+</html>

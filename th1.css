@@ -1,0 +1,291 @@
+/* header */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    white-space: nowrap;
+}
+
+.menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu.show {
+    display: flex;
+    margin-left: 18px;
+}
+
+body {
+    font-family: Times New Roman, sans-serif;
+    margin: 0;
+    padding: 0 0 70px;
+    min-height: 100vh;
+    background-color: rgb(104, 127, 12);
+}
+
+/* Introduce */
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+/* List projects */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project {
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+/* Desktop */
+.project-list {
+    grid-template-columns: repeat(3, 1fr);
+}
+/* Tablet */
+@media (max-width: 992px) {
+
+    .project-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        gap: 25px;
+    }
+}
+/* Mobile   */
+@media (max-width: 576px) {
+
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+    }
+
+}
+.submit:hover {
+    background-color: #555;
+    color:aqua;
+
+}
+
+h2 {
+    color:red;
+    font-size: 20px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.skill {
+    min-width: 0;
+    text-align: center;
+}
+
+.skill img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 12px auto 0;
+}
+
+.project {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    border-color: #007bff;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+.menu.show {
+    display: flex;
+}
+
+body.dark {
+    background-color: #222;
+    color: white;
+}
+
+body.dark .project {
+    background-color: #333;
+}
+
+body {
+    background-color: #f5f9ff;
+    color: #222;
+    transition: 0.3s;
+}
+
+body.dark section {
+    background-color: #222;
+    color: white;
+}
+
+
+
+#contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 15px;
+
+    border: 2px solid #ddd;
+    border-radius: 10px;
+
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+#contactForm button {
+    align-self: center;
+    padding: 12px 30px;
+
+    background: #007bff;
+    color: white;
+
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#contactForm button:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+#noResult {
+    display: none;
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    display: none;
+}
+section.active {
+    display: block;
+}
+/* Hiệu ứng nhẹ cho chuyển section */
+section.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Nút ba gạch */
+.menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007bff;
+    line-height: 1;
+    padding: 0;
+}
+
+/* Menu ban đầu ẩn */
+.menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Khi bấm nút thì hiện menu */
+.menu.active {
+    display: flex;
+    gap: 25px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: rgb(127, 92, 12);
+    color: white;
+}
